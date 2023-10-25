@@ -1,4 +1,8 @@
 @import './base/normaizer';
 @import './utils/variables';
+@import './base/font-family';
 
 @import './pages/accueil.scss';
+@import './layouts/headers.scss';
+@import './components/pink-button.scss';
+@import './layouts/section-infos.scss';

@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh my food</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <h1>pâge accueil</h1>
+    <header class="header">
+        <section>
+            <h1 class="special-title">ohmyfood</h1>
+        </section>
+        <form>
+            <label for="localisation"><i class="fa-solid fa-location-dot"></i></label>
+            <input type="text" name="localisation" id="localisation" value="Paris, Belleville">
+        </form>
+    </header>
+    <section class="infos">
+        <h2>Réservez le menu qui vous convient</h2>
+        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <button class="pink-button" type="button">Explorer nos restaurants</button>
+    </section>
+    <section>
+        <h3>Fonctionnement</h3>
+        <div class="rectangles">
+
+            <div class="rectangle">
+                <p>Choisissez un restaurant</p>
+            </div>
+            <div class="rectangle">
+                <p>Composez votre menu</p>
+            </div>
+            <div class="rectangle">
+                <p>Dégustez au restaurant</p>
+            </div>
+        </div>
+    </section>
+    <section class="restaurants">
+        <h3>Restaurants</h3>
+
+    </section>
+    <footer class="footer">
+        <h4>ohmyfood</h4>
+        <p>Proposer un restaurant</p>
+        <p>Devenir partenaire</p>
+        <p>Mentions légales</p>
+        <p>Contact</p>
+
+    </footer>
 </body>
 </html>

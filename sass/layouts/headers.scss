@@ -1,0 +1,33 @@
+.header {
+
+    & section {
+           display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    width: 100%; 
+
+    }
+
+    & form {
+        width: 100%;
+        background: #EAEAEA;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        & input[type=text] {
+            width: 109px;
+            border: none;
+            font-weight: 500;
+            background-color: transparent;
+        }
+    }
+
+
+}
+
+
+
