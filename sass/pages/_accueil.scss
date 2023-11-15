@@ -18,18 +18,57 @@ $hauteur: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
- }
+  border: none;
+  font-size: 16px;
+  position: relative;
 
- .rectangle p {
+   & .pastille {
+    width: 20px;
+    height: 20px;
+    background-color: $main-purple;
+    color: white;
+    border-radius: 100%;
     display: flex;
     justify-content: center;
-    
-}
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: -10px;
+   }
 
-section h3 {
+   & p {
+        display: flex;
+    justify-content: center;
+   }
+ }
+
+.infos h3,
+.fonctionnement h3 {
     padding-left: 15px;
     padding-bottom: 20px;
     padding-top: 20px;
+}
+
+.fonctionnement {
+    padding: 30px 0;
+}
+
+
+.images img {
+    width: 346px;
+    height: 231px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.images {
+    background-color: $main-gray;
+}
+
+.restaurants {
+    background-color: $main-gray;
+    padding: 30px 10px;
 }
 
 .footer {
@@ -50,3 +89,5 @@ section h3 {
 .footer p {
     padding: 7px;
 }
+
+
