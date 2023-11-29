@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
+    <div class="loader">
+      <p>Ceci est le loader</p>
+    </div>
     <header class="header">
       <section>
         <h1 class="special-title">ohmyfood</h1>
@@ -42,15 +45,18 @@
       <div class="rectangles">
         <button type="button" class="rectangle">
           <span class="pastille">1</span>
-          <p>Choisissez un restaurant</p>
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <p> Choisissez un restaurant</p>
         </button>
         <button type="button" class="rectangle">
           <span class="pastille">2</span>
-          <p>Composez votre menu</p>
+          <i class="fa-solid fa-list-ul"></i>
+          <p> Composez votre menu</p>
         </button>
         <button type="button" class="rectangle">
           <span class="pastille">3</span>
-          <p>Dégustez au restaurant</p>
+          <i class="fa-solid fa-store"></i>
+          <p> Dégustez au restaurant</p>
         </button>
       </div>
     </section>
@@ -65,7 +71,7 @@
           <div class="description">
             <h3>La palette du goût</h3>
             <p>Ménilmontant</p>
-            <span class="like"><i class="fa-regular fa-heart"></i></span>
+            <span class="like"><i class="fa-regular fa-heart empty"></i><i class="fa-solid fa-heart full"></i></span>
           </div>
           <span class="new">Nouveau</span>
         </a>
@@ -77,7 +83,7 @@
           <div class="description">
             <h3>La note enchantée</h3>
             <p>Charonne</p>
-            <span class="like"><i class="fa-regular fa-heart"></i></span>
+            <span class="like"><i class="fa-regular fa-heart empty"></i><i class="fa-solid fa-heart full"></i></span>
           </div>
           <span class="new">Nouveau</span>
         </article>
@@ -89,7 +95,7 @@
           <div class="description">
             <h3>A la française</h3>
             <p>Cité Rouge</p>
-            <span class="like"><i class="fa-regular fa-heart"></i></span>
+            <span class="like"><i class="fa-regular fa-heart empty"></i><i class="fa-solid fa-heart full"></i></span>
           </div>
         </article>
         <article class="card">
@@ -100,15 +106,15 @@
           <div class="description">
             <h3>Le délice des sens</h3>
             <p>Folie-Méricourt</p>
-            <span class="like"><i class="fa-regular fa-heart"></i></span>
+            <span class="like"><i class="fa-regular fa-heart empty"></i><i class="fa-solid fa-heart full"></i></span>
           </div>
         </article>
       </article>
     </section>
     <footer class="footer">
       <h4>ohmyfood</h4>
-      <p>Proposer un restaurant</p>
-      <p>Devenir partenaire</p>
+      <p><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
+      <p><i class="fa-solid fa-handshake"></i> Devenir partenaire</p>
       <p>Mentions légales</p>
       <p>Contact</p>
     </footer>
