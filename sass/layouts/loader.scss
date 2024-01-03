@@ -1,0 +1,49 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    animation: display-loader 3s;
+
+    & h2 {
+        font-size: 26px;
+        font-weight: 700;
+        animation: pulse 1.5s infinite ease-out;
+    }
+
+    & p {
+        color: $main-purple;
+        font-weight: 700;
+        font-style: italic;
+    }
+}
+
+@keyframes display-loader {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+

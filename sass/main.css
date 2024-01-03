@@ -40,12 +40,17 @@ button {
   background-color: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   border-radius: 20px;
+  padding-left: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border: none;
   font-size: 16px;
   position: relative;
+  gap: 10px;
+}
+.rectangle i {
+  min-width: 20px;
 }
 .rectangle .pastille {
   width: 20px;
@@ -60,13 +65,9 @@ button {
   top: 40%;
   left: -10px;
 }
-.rectangle p {
-  display: flex;
-  justify-content: center;
-}
 
-.infos h3,
-.fonctionnement h3 {
+.infos h2,
+.fonctionnement h2 {
   padding-left: 15px;
   padding-bottom: 20px;
   padding-top: 20px;
@@ -92,11 +93,12 @@ button {
   padding: 30px 10px;
 }
 
-.footer {
+.footer ul li {
   width: 100%;
   height: 186px;
   background-color: #353535;
   color: #f6f6f6;
+  padding-left: 20px;
 }
 
 .footer h4 {
@@ -104,20 +106,258 @@ button {
   font-family: "Shrikhand", sans-serif;
   font-style: italic;
   font-weight: 400;
+  padding-top: 22px;
 }
 
-.footer p {
+.footer ul li {
   padding: 7px;
 }
 
-.header section {
+@media (min-width: 767px) {
+  .rectangle {
+    max-width: 400px;
+  }
+}
+@media (min-width: 1023px) {
+  .rectangles {
+    flex-direction: row;
+    padding: 0 15px;
+  }
+  .card {
+    width: 490px;
+    height: 251px;
+  }
+}
+main {
+  border-radius: 25px;
+  background-color: #f6f6f6;
+  margin-top: -30px;
+  position: relative;
+}
+
+.special-title {
+  font-size: 28px;
+}
+
+.header-restaurant {
+  display: flex;
+  gap: 20%;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #99E2D0;
+  margin: 5px 0px;
+}
+
+.card-menu {
+  overflow: hidden;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.card-menu img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-menu .description {
+  padding: 5px;
+  position: relative;
+}
+.card-menu .description .like {
+  position: absolute;
+  top: 30%;
+  right: 10px;
+  font-size: 22px;
+}
+.card-menu .new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 80px;
+  height: 29px;
+  background: #99e2d0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main h1 {
+  display: flex;
+  padding: 32px 10px 0px 17px;
+}
+
+div h2 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 40px 30px 5px;
+}
+
+.menu-rectangles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-rectangle {
+  width: 90%;
+  height: 72px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 15px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 5px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.menu-rectangle:hover .checkmark {
+  width: 60px;
+  visibility: visible;
+}
+.menu-rectangle:hover .checkmark i {
+  width: 20px;
+  font-size: 14px;
+}
+.menu-rectangle:hover .price {
+  transform: translateX(-60px);
+}
+.menu-rectangle:hover .menu-rectangle--description {
+  width: 63%;
+}
+.menu-rectangle--description {
+  width: 85%;
+  transition: all 0.5s;
+}
+.menu-rectangle--description p {
+  font-size: 15px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-rectangle--description h3 {
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-rectangle .price {
+  transition: all 0.5s;
+}
+.menu-rectangle .checkmark {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 0px;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+.menu-rectangle .checkmark i {
+  height: 20px;
+  width: 0px;
+  border-radius: 100%;
+  background-color: white;
+  font-size: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #99E2D0;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+}
+
+.footer {
+  width: 100%;
+  height: 186px;
+  background-color: #353535;
+  color: #f6f6f6;
+  padding-left: 20px;
+  gap: 10px;
+}
+
+@media (min-width: 1023px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0px 15px;
+    height: 75px;
+  }
+  .footer h4 {
+    padding: 0px;
+  }
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  animation: display-loader 1.5s;
+}
+
+@keyframes display-loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.header-home section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 63px;
   width: 100%;
 }
-.header form {
+.header-home form {
   width: 100%;
   background: #EAEAEA;
   height: 50px;
@@ -126,7 +366,7 @@ button {
   align-items: center;
   gap: 15px;
 }
-.header form input[type=text] {
+.header-home form input[type=text] {
   width: 109px;
   border: none;
   font-weight: 500;
@@ -137,10 +377,15 @@ button {
   height: 50px;
   font-weight: 500;
   border-radius: 25px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   color: white;
   padding: 0 10px;
+  min-width: 186px;
+}
+.pink-button:hover {
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 .infos {
@@ -154,7 +399,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 0px 30px 0px 20px;
 }
 .infos p {
   margin: 0px 20px 20px 20px;
@@ -192,6 +437,25 @@ button {
   right: 10px;
   font-size: 22px;
 }
+.card .description .like .full {
+  display: none;
+  background: linear-gradient(193.33deg, #ff79da -11.44%, #9356dc 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  opacity: 0.2;
+  transition: 1s;
+}
+.card .description .like:hover .full {
+  display: inline-block;
+  opacity: 1;
+  animation: heart-full 1s;
+}
+.card .description .like:hover .empty {
+  display: none;
+}
 .card .new {
   position: absolute;
   top: 10px;
@@ -219,5 +483,13 @@ button {
     row-gap: 30px;
     -moz-column-gap: 100px;
          column-gap: 100px;
+  }
+}
+@keyframes heart-full {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=main.css.map */
