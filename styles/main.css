@@ -230,7 +230,24 @@ div h2 {
   align-items: center;
   gap: 12px;
 }
+.menu-rectangles.entrees {
+  animation: menu-displays 0.5s ease-in;
+}
+.menu-rectangles.plats {
+  animation: menu-displays 1s ease-in;
+}
+.menu-rectangles.desserts {
+  animation: menu-displays 1.5s ease-in;
+}
 
+@keyframes menu-displays {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
 .menu-rectangle {
   width: 90%;
   height: 72px;
